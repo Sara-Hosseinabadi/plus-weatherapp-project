@@ -47,18 +47,18 @@ function displayForecast(response) {
               forecastDay.weather[0].icon
             }@2x.png" alt="" />
               <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">${Math.round(
+                <span class="weather-forecast-temperature-max"> ${Math.round(
                   forecastDay.temp.max
-                )}°</span> 
-                <span class="weather-forecast-temperature-min">${Math.round(
-                  forecastDay.temp.min
                 )}°</span>
-          </div>
-        </div>                      
+                 <span class="weather-forecast-temperature-min"> ${Math.round(
+                   forecastDay.temp.min
+                 )}°</span>
+              </div>   
+         </div>       
+                            
     `;
     }
   });
-
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
@@ -137,4 +137,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-search("London");
+search("New York");
